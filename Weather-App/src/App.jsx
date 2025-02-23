@@ -4,13 +4,17 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import WeatherData from './WeatherData'
 import WeatherDisplay from './WeatherDisplay'
+import CityList from './cityList'
+import Header from './Header'
 
 function App() {
 
   return (
     <div>
-      <WeatherData/>
-      <WeatherDisplay/>
+      <Header />
+      <CityList />
+      <WeatherDisplay />
+
     </div>
   )
 }
