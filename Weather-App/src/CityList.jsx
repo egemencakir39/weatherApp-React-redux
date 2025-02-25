@@ -3,13 +3,20 @@ import { useDispatch } from 'react-redux';
 import TurkeyMap from 'turkey-map-react';
 import { getWeatherData } from './redux/WeatherDataSlice';
 import cityData from '../src/JsonData/CityList.json'
+import '../src/css/cityList.css'
+import { useNavigate } from "react-router-dom";
 
 function CityList() {
 
     const [view, setView] = useState("list");
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const searchCity = (name) => {
         dispatch(getWeatherData(name))
+    }
+
+    const handleCityClick = (name) => {
+        navigate(`/city/${name}`);
     }
 
 
@@ -18,19 +25,19 @@ function CityList() {
     return (
         <div>
             <div className='btn'>
-                <button onClick={() => setView('list')}>Şehir Listesi</button>
-                <button onClick={() => setView('map')}>Harita</button>
+                <button className='city' onClick={() => setView('list')}>Şehir Listesi</button>
+                <button className='map' onClick={() => setView('map')}>Harita</button>
 
             </div>
             {view == 'map' && (<div className='map'>
                 <TurkeyMap onClick={({ plateNumber, name }) =>
-                    searchCity(name)} />
+                    handleCityClick(name)} />
             </div>
             )}
             {view == 'list' && (
                 <div className='list'>
                     {cityData.map((city, plate) => (
-                        <li key={plate}>{city.id}:{city.name}</li>
+                        <span className='cityButton' key={plate}>{city.id}: {city.name}</span>
                     ))}
 
                 </div>

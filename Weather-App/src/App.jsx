@@ -2,18 +2,21 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import WeatherData from './WeatherData'
-import WeatherDisplay from './WeatherDisplay'
 import CityList from './cityList'
 import Header from './Header'
+import PageContainer from './Container/PageContainer'
+import RouterConfig from './config/RouterConfig'
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
 
   return (
     <div>
-      <Header />
-      <CityList />
-      <WeatherDisplay />
+      <BrowserRouter>
+        <PageContainer>
+          <RouterConfig />
+        </PageContainer>
+      </BrowserRouter>
 
     </div>
   )

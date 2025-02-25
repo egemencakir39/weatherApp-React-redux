@@ -1,0 +1,36 @@
+.cityButton {
+    display: inline-block;
+    justify-content: space-around;
+    margin: 16px;
+    padding: 10px;
+    background-color: bisque;
+    border-radius: 15px;
+    font-size: 24px;
+    width: 300px;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn .city {
+    padding: 10px;
+    margin: 5px 10px;
+    width: 140px;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: large;
+}
+
+.btn .map {
+    padding: 10px;
+    margin: 5px 10px;
+    width: 140px;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: large;
+}
