@@ -37,7 +37,7 @@ function CityList() {
             {view == 'list' && (
                 <div className='list'>
                     {cityData.map((city, plate) => (
-                        <span className='cityButton' key={plate}>{city.id}: {city.name}</span>
+                        <span onClick={()=>handleCityClick(city.name)} className='cityButton' key={plate}>{city.id}: {city.name}</span>
                     ))}
 
                 </div>

@@ -32,9 +32,6 @@ export const weatherSlice = createSlice({
                 state.loading = false;
                 state.error = action.error.message;
             })
-
-
-
     }
 })
 

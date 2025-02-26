@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { getWeatherData } from '../redux/WeatherDataSlice';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+
 
 function CityWeather() {
 
@@ -19,7 +22,12 @@ function CityWeather() {
         return null;
     };
     if (loading) {
-        return <p>Yükleniyor..</p>
+        return  (
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+             <CircularProgress color='success' size="3rem"/>
+            </div>
+    )
+       
     }
     if (error) {
         return <p>Hava Durumu Şuan Gösterilemiyor.</p>
@@ -32,11 +40,11 @@ function CityWeather() {
         <div>
             <h1>Şehir: {weatherData.name}</h1>
             <p>Zaman Dilimi: {weatherData.timezone}</p>
-            <p>Sıcaklık: {weatherData.main?.temp}°C</p>
-            <p>Hissedilen: {weatherData.main?.feels_like}°C</p>
+            <p>Sıcaklık: {weatherData.main?.temp.toFixed(1)}°C</p>
+            <p>Hissedilen: {weatherData.main?.feels_like.toFixed(1)}°C</p>
             <p>Nem: {weatherData.main?.humidity}%</p>
             <p>Hava Durumu: {weatherData.weather?.[0]?.description}</p>
-            <p>Rüzgar Hızı: {weatherData.wind?.speed} m/s</p>
+            <p>Rüzgar Hızı: {weatherData.wind?.speed.toFixed(2)} m/s</p>
             <p>Basınç: {weatherData.main?.pressure} hPa</p>
             <img src={iconUrl} alt="Hava Durumu İkonu" />
         </div>

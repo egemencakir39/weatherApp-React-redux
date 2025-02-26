@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../Header'
-import CityList from '../cityList'
+import CityList from '../CityList'
 
 function Home() {
     return (
