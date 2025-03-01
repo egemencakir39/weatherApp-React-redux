@@ -31,13 +31,14 @@ function CityList() {
             </div>
             {view == 'map' && (<div className='map'>
                 <TurkeyMap onClick={({ plateNumber, name }) =>
-                    handleCityClick(name)} />
+                    handleCityClick(name)}
+                    customStyle={{ idleColor: "#828282", hoverColor: "#f2f2f2" }} />
             </div>
             )}
             {view == 'list' && (
                 <div className='list'>
                     {cityData.map((city, plate) => (
-                        <span onClick={()=>handleCityClick(city.name)} className='cityButton' key={plate}>{city.id}: {city.name}</span>
+                        <span onClick={() => handleCityClick(city.name)} className='cityButton' key={plate}>{city.id}: {city.name}</span>
                     ))}
 
                 </div>

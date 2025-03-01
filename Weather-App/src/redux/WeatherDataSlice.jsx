@@ -7,7 +7,7 @@ const initialState = {
     error: null
 }
 export const getWeatherData = createAsyncThunk('weatherData', async (cityName) => {
-    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=16a51ee406309a38e45ef48c1951dfd0&units=metric&lang=tr`)
+    const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=16a51ee406309a38e45ef48c1951dfd0&units=metric&lang=tr`)
     console.log(response.data)
     return response.data;
 })

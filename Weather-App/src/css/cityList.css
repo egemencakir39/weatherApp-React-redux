@@ -3,13 +3,16 @@
     justify-content: space-around;
     margin: 16px;
     padding: 10px;
-    background-color: bisque;
+    background-color: rgb(73, 79, 163);
     border-radius: 15px;
     font-size: 24px;
     width: 300px;
     height: 30px;
     text-align: center;
     cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    border: 1px solid white;
+    color: white;
 }
 
 .btn {
@@ -21,16 +24,26 @@
     padding: 10px;
     margin: 5px 10px;
     width: 140px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(73, 79, 163);
+    color: white;
     border-radius: 15px;
     font-size: large;
+    font-family: "Noto Sans", sans-serif;
 }
 
 .btn .map {
+    color: white;
+    background-color: rgb(73, 79, 163);
     padding: 10px;
     margin: 5px 10px;
     width: 140px;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 15px;
     font-size: large;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.map {
+    color: rgb(139, 98, 98);
 }
