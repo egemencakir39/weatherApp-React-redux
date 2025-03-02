@@ -1,0 +1,15 @@
+.weatherCard {
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.weeklyTitle,
+h2 {
+    color: white;
+}
+
+.card {
+    padding: 1rem 5rem;
+    cursor: pointer;
+}

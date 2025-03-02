@@ -30,7 +30,7 @@ function CityWeather() {
             </div>
 
             <div>
-                <p style={{ color: 'white' }}> HAFTALIK HAVA DURUMU</p>
+                <WeatherInfoWeekly />
             </div>
         </div>
     );
