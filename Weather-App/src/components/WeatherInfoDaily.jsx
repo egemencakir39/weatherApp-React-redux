@@ -20,7 +20,7 @@ function WeatherInfoDaily() {
 
 
     if (!weatherData || !weatherData.list || weatherData.list.length === 0) {
-        return <p>Veri bulunamadı.</p>;
+        return null;
     }
 
     const firstWeather = weatherData.list[0];

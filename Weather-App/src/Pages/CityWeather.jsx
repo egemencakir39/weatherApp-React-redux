@@ -5,12 +5,9 @@ import { getWeatherData } from '../redux/WeatherDataSlice';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import '../css/cityWeather.css'
-import AddLocationIcon from '@mui/icons-material/AddLocation';
-import AirIcon from '@mui/icons-material/Air';
-import CompressIcon from '@mui/icons-material/Compress';
-import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import WeatherInfoDaily from '../components/WeatherInfoDaily';
 import WeatherInfoWeekly from '../components/WeatherInfoWeekly';
+import WeatherInfoGraphics from '../components/WeatherInfoGraphics';
 
 function CityWeather() {
 
@@ -25,7 +22,7 @@ function CityWeather() {
                     <WeatherInfoDaily />
                 </div>
                 <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-                    <p style={{ color: 'white' }}> GRAFİK</p>
+                    <WeatherInfoGraphics />
 
                 </div>
             </div>
@@ -35,5 +32,4 @@ function CityWeather() {
             </div>
         </div>
     );
-}
-export default CityWeather
+}export default CityWeather
