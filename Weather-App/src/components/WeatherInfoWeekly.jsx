@@ -11,13 +11,11 @@ function WeatherInfoWeekly() {
     const { weatherData, loading, error } = useSelector((state) => state.weather)
 
 
-    useEffect(() => {
-        dispatch(getWeatherData(cityName));
-    }, [cityName, dispatch])
+
 
     if (loading) {
         return (
-            <div style={{ display: 'flex', justifyContent: 'center', }}>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <CircularProgress size='3rem' />
             </div>
         )
@@ -41,7 +39,7 @@ function WeatherInfoWeekly() {
                         <span className='card' key={index} style={{ marginBottom: '10px' }}>
                             <p>{dayName}</p>
                             <img src={iconUrl} alt="" />
-                            <p>{temp}°</p>
+                            <p>{temp}°C</p>
                             <p>{desc}</p>
                         </span>
                     );

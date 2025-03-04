@@ -10,6 +10,29 @@ h2 {
 }
 
 .card {
-    padding: 1rem 5rem;
     cursor: pointer;
+    border: white 2px solid;
+    width: 250px;
+    height: 250px;
+    margin-right: 4rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    background-color: #3A7CA5;
+}
+
+.card:hover {
+    transition: all .3s;
+    border: rgba(255, 255, 255, 0.445) 2px solid;
+}
+
+.card p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3A7CA5;
+}
+
+.card img {
+    padding: 0px 100px;
+    background-color: #3A7CA5;
 }

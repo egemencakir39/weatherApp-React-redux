@@ -3,7 +3,7 @@
     justify-content: space-around;
     margin: 16px;
     padding: 10px;
-    background-color: rgb(73, 79, 163);
+    background: linear-gradient(to right, #3A7CA5, #375781);
     border-radius: 15px;
     font-size: 24px;
     width: 300px;
@@ -25,7 +25,7 @@
     margin: 5px 10px;
     width: 140px;
     border: 1px solid rgb(255, 255, 255);
-    background-color: rgb(73, 79, 163);
+    background: linear-gradient(to right, #3A7CA5, #375781);
     color: white;
     border-radius: 15px;
     font-size: large;
@@ -34,7 +34,7 @@
 
 .btn .map {
     color: white;
-    background-color: rgb(73, 79, 163);
+    background: linear-gradient(to right, #3A7CA5, #375781);
     padding: 10px;
     margin: 5px 10px;
     width: 140px;
@@ -42,8 +42,4 @@
     border-radius: 15px;
     font-size: large;
     font-family: "Noto Sans", sans-serif;
-}
-
-.map {
-    color: rgb(139, 98, 98);
 }

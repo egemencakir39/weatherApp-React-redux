@@ -14,6 +14,7 @@ import WeatherInfoWeekly from '../components/WeatherInfoWeekly';
 
 function CityWeather() {
 
+    const { weatherData, loading, error } = useSelector((state) => state.weather);
 
 
 

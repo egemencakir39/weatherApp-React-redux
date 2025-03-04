@@ -18,17 +18,6 @@ function WeatherInfoDaily() {
         dispatch(getWeatherData(cityName));
     }, [cityName, dispatch]);
 
-    if (loading) {
-        return (
-            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <CircularProgress size="3rem" />
-            </div>
-        );
-    }
-
-    if (error) {
-        return <p>Hava Durumu Şu An Gösterilemiyor.</p>;
-    }
 
     if (!weatherData || !weatherData.list || weatherData.list.length === 0) {
         return <p>Veri bulunamadı.</p>;
@@ -36,9 +25,7 @@ function WeatherInfoDaily() {
 
     const firstWeather = weatherData.list[0];
 
-    if (!firstWeather || !firstWeather.weather || firstWeather.weather.length === 0) {
-        return <p>Hava durumu verisi eksik.</p>;
-    }
+
 
     const iconCode = firstWeather.weather[0]?.icon;
     const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
